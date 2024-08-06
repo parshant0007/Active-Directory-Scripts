@@ -9,8 +9,11 @@ $users = Get-content 'Import File Path'
 foreach($Domain in $Domains)                                                 
 
 {
+
 foreach ($User in $users)
+
 {
+
 Get-ADComputer $User -Server $domain -Properties * | Select CN, dNSHostName, distinguishedName, operatingSystem, enabled, lastLogonTimestamp, pwdLastSet, whenChanged, whenCreated | Export-Csv 'Export File Path' -NoTypeInformation -APPEND -ErrorAction SilentlyContinue
 
 }
