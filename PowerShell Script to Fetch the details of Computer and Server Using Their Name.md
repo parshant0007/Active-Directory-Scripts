@@ -1,7 +1,7 @@
 # PowerShell Script to Fetch the details of Computer and Server Using Their Name
 
 ---
-$domains = "emea.corp.geaag.com", "ap.corp.geaag.com","am.corp.geaag.com","corp.geaag.com" 
+$domains = "Domain1", "Domain2","Domain3","Domain4" 
 $users = Get-content 'C:\Users\sharma.pr.adm\Desktop\ScriptOU\mohitup.csv'                                           
 foreach($Domain in $Domains)                                                 
 {
